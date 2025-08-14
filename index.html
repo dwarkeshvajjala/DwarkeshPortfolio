@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwarkesh Vajjala - Fullstack Developer</title>
+    <meta name="description" content="Dwarkesh Vajjala - Fullstack Developer with 3.2 years of experience, specializing in .NET Core, Angular, and database technologies.">
+    <!-- Preload GIFs -->
+    <link rel="preload" as="image" href="../assets/gif/heroSectionPortfolio.gif">
+    <link rel="preload" as="image" href="../assets/gif/portfolioIcon.gif">
+
+    <!-- Preload Icons -->
+    <link rel="preload" as="image" href="../assets/Icons/amazonwebservices-original-wordmark.svg">
+    <link rel="preload" as="image" href="../assets/Icons/angular.svg">
+    <link rel="preload" as="image" href="../assets/Icons/csharp-original.svg">
+    <link rel="preload" as="image" href="../assets/Icons/dot-net-original-wordmark.svg">
+    <link rel="preload" as="image" href="../assets/Icons/downloadIcon.svg">
+    <link rel="preload" as="image" href="../assets/Icons/express-original-wordmark.svg">
+    <link rel="preload" as="image" href="../assets/Icons/figma-icon.svg">
+    <link rel="preload" as="image" href="../assets/Icons/getpostman-icon.svg">
+    <link rel="preload" as="image" href="../assets/Icons/javascript-original.svg">
+    <link rel="preload" as="image" href="../assets/Icons/microsoft_azure-icon.svg">
+    <link rel="preload" as="image" href="../assets/Icons/microsoft-sql-server-logo.svg">
+    <link rel="preload" as="image" href="../assets/Icons/mongodb-original-wordmark.svg">
+    <link rel="preload" as="image" href="../assets/Icons/nodejs-original-wordmark.svg">
+    <link rel="preload" as="image" href="../assets/Icons/react-original-wordmark.svg">
+    <link rel="preload" as="image" href="../assets/Icons/typescript-original.svg">
+
+    <!-- Preload Images -->
+    <link rel="preload" as="image" href="../assets/Images/ClientPortfolio.png">
+    <link rel="preload" as="image" href="../assets/Images/dbApprochBlog.png">
+    <link rel="preload" as="image" href="../assets/Images/gptBlog.png">
+    <link rel="preload" as="image" href="../assets/Images/loggingBlog.png">
+    <link rel="preload" as="image" href="../assets/Images/promteNet.png">
+    <link rel="preload" as="image" href="../assets/Images/streamingApp.jpg">
+    
+    <link rel="preload" as="image" href="../assets/dwarkesh24.jpg">
+    <link rel="preload" as="document" href="../assets/resume.pdf" type="application/pdf">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    
+    <style>
+
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            scroll-behavior: smooth;
+            /* background-color: #1A1A1A; */
+            background-color: black;
+            color: #ffffff;
+        }
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        #noiseCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            pointer-events: none;
+        }
+
+        /* page 1  */
+        #page1 {
+            background: url('/api/placeholder/1920/1080') no-repeat center center;
+            background-size: cover;
+            text-align: left;
+            padding: 0 5%;
+            min-height: 670px;
+            display: flex;
+            align-items: center;
+        }
+        .content-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+        .text-content {
+            flex: 1;
+        }
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .proximity-image {
+            width: 300px;
+            height: 300px;
+            background: url('/api/placeholder/300/300') no-repeat center center;
+            background-size: cover;
+            transition: transform 0.3s ease;
+        }
+        #page1 h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        #page1 h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+        #page1 p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        /* navbar */
+        /* .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 5%;
+            background-color: black;
+            background-color: blue;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            margin-left: 2rem;
+        } */
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;  /* Remove horizontal padding */
+            background-color: black;
+        }
+        .container-fluid {
+            padding-left: 5%;  /* Match the padding of the hero section */
+            padding-right: 5%;
+        }
+        .navbar-brand
+        {
+            position: relative;
+            left: -15px;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            margin-left: 2rem;
+        }
+        .scroll-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            cursor: pointer;
+            animation: bounce 4s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-10px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-5px) translateX(-50%);
+            }
+        }
+
+
+
+        /* page 2  */
+        #page2 {
+        /* background-color: #0F0F0F; */
+        padding-top: 110px !important;
+        padding: 4rem 5%;
+        }
+        .page2-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        .page2-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .content-box {
+            background-color: #171717;
+            
+            /* background-color: #3d3d3d; */
+            border-radius: 10px;
+            padding: 1.5rem;
+            height: max-content;
+            position: relative;
+            z-index: 1;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* Adjust opacity to suit your needs */
+
+        }
+        .content-box-img
+        {
+            background-color: #171717;
+            border-radius: 10px;
+            height: max-content;
+            position: relative;
+            z-index: 1;
+            transition: opacity 0.3s ease, filter 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .content-box:hover
+        {
+            background-color: #212121;
+        }
+        .content-box.blurred {
+            opacity: 0.5;
+            filter: blur(3px);
+        }
+        .content-box.focused {
+            opacity: 1;
+            filter: none;
+            z-index: 2;
+        }
+
+
+        /* Resume Icon */
+        .resume-icon {
+            display: flex;
+            background: #2a2a2a;
+            border: 3px solid #2a2a2a;
+            border-radius: 80px;
+        }
+        .resume-icon:hover {
+            background: #4a4a4a;
+        }
+        .resume-icon-inner {
+            height: 32px;
+            width: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .resume-text {
+            align-content: center;
+            margin-left: 3px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 12px;
+        }
+
+
+        /* dynamic photo texts */
+        .profile-container {
+                position: relative;
+                width: 100%;
+                /* max-width: 600px;  */
+                margin: 0 auto;
+        }
+        .profile-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        .intro-text-container {
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            right: 20px;
+            max-width: 300px;
+        }
+        .message {
+            background-color: rgba(0, 0, 0,0.5);
+            /* background-color: rgba(255, 255, 255, 0.05); */
+            width: max-content;
+            /* color: black; */
+            color: white;
+            padding: 6px 12px;
+            margin-bottom: 6px;
+            border-radius: 40px 40px 40px 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .message.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .typing-indicator {
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .typing-indicator span {
+            height: 10px;
+            width: 10px;
+            float: left;
+            margin: 0 1px;
+            background-color: #9E9EA1;
+            display: block;
+            border-radius: 50%;
+            opacity: 0.4;
+        }
+        .typing-indicator span:nth-of-type(1) {
+            animation: 1s blink infinite 0.3333s;
+        }
+        .typing-indicator span:nth-of-type(2) {
+            animation: 1s blink infinite 0.6666s;
+        }
+        .typing-indicator span:nth-of-type(3) {
+            animation: 1s blink infinite 0.9999s;
+        }
+        @keyframes blink {
+            50% {
+                opacity: 1;
+            }
+        }
+        .grab-email {
+            /* color: #007bff; */
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        .grab-email:hover {
+            color: #61dafb;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+
+
+        .highlight {
+            color: #61dafb;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill-item {
+            background-color: #3a3a3a;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+        .social-icons div a {
+            color: #ffffff;
+            font-size: 1.5rem;
+        }
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+        }
+        .experience-item h4, .education-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.25rem;
+        }
+        .experience-item p, .education-item p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: #a0a0a0;
+        }
+        .tool-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .tool-icon{
+            width: max-content;
+        }
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+        }
+        
+
+
+      
+        /* blogs section css   */
+        #blogs {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 5%;
+        }
+        .blog-link
+        {
+            text-decoration: none;
+        }
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .blog-item {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            min-height: 450px;
+        }
+        .blog-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .blog-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+        }
+        .blog-excerpt {
+            font-size: 1rem;
+            color: #a0a0a0;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        .blog-views, .blog-date {
+            display: flex;
+            align-items: center;
+        }
+        .blog-views i, .blog-date i {
+            margin-right: 0.5rem;
+        }
+        @media (max-width: 992px) {
+            .blog-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 15px;
+            }
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* resumem popUP */
+        /* The Modal (hidden by default) */
+            /* Hide body scroll when modal is open */
+   /* Hide body scroll when modal is open */
+   #page2, .page2-container, .content-box {
+            position: static;
+            z-index: auto;
+        }
+        
+        .resume-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 9999;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .resume-modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 20px;
+            padding-top: 60px; /* Add top padding for close button space */
+
+            border-radius: 10px;
+            max-width: 800px;
+            width: 90%;
+            height: 90vh; /* Added to ensure content takes up most of the viewport height */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .resume-modal.active {
+            display: block;
+        }
+        
+        body.modal-open {
+            overflow: hidden;
+        }
+
+        /* Additional styles to fix iframe sizing */
+        .resume-iframe {
+            width: 100%;
+            height: calc(100% - 80px); /* Subtract padding */
+            border: none;
+            display: block;
+        }
+
+      
+        .close-btn {
+    position: absolute;
+    right: 20px; /* Position at the top left */
+    top: 10px;
+    font-size: 32px; /* Increase size for visibility */
+    font-weight: bold; /* Make it bold for clearer appearance */
+    cursor: pointer;
+    color: #444; /* Darker color for contrast */
+    padding: 8px;
+    border-radius: 50%; /* Optional for a circular look */
+}
+
+#projects {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 5%;
+        }
+
+/* custom cursore */
+/* * {
+    cursor: none !important;
+} */
+
+.cursor-wrapper {
+    pointer-events: none;
+    position: fixed;
+    z-index: 99999;
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: #61dafb;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    z-index: 99999;
+}
+
+.cursor-circle {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(97, 218, 251, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease-out;
+    z-index: 99998;
+}
+
+/* Hover effects */
+.cursor-dot.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #61dafb;
+}
+
+.cursor-circle.hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    border-color: rgba(97, 218, 251, 0);
+    background: rgba(97, 218, 251, 0.1);
+}
+
+/* Hide on mobile/tablet */
+@media (max-width: 1024px) {
+    .cursor-wrapper {
+        display: none;
+    }
+    * {
+        cursor: auto !important;
+    }
+}
+        /* check */
+        @media (max-width: 1200px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            #page1 h1 {
+                font-size: 2rem;
+            }
+            #page1 h2 {
+                font-size: 2.5rem;
+            }
+            #page1 p {
+                font-size: 1rem;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .grid-item {
+                margin-bottom: 2rem;
+            }
+            .content-wrapper {
+                flex-direction: column;
+            }
+            .text-content, .image-content {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        @media (max-width: 992px) {
+            .page2-container {
+                flex-direction: column;
+            }
+        } 
+        @media (max-width: 992px) {
+        .page2-container {
+            flex-direction: column;
+            }
+        }
+        @media (max-width: 768px) {
+        .container-fluid {
+            padding-left: 15px;  /* Default Bootstrap padding for small screens */
+            padding-right: 15px;
+        }
+        }
+        .companyLink
+        {
+            text-decoration: none;
+            color: #61dafb;
+        }
+
+        .visit-site-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.visit-site-btn:hover {
+    background-color: #0056b3;
+}
+
+    </style> 
+</head>
+<body>
+    <canvas id="noiseCanvas"></canvas>
+    <div class="cursor-glow"></div>
+    <div class="custom-cursor"></div>
+    
+    <div class="content">
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/gif/portfolioIcon.gif" alt="Portfolio Name">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page1">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#page2">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">My Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="page1" class="page">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h1>Hi, I'm Dwarkesh</h1>
+                <h2>I'M A <span class="highlight">FULLSTACK</span><br>DEVELOPER</h2>
+                <p>Full-stack developer with 3+ years of experience delivering user-focused digital products and scalable backend systems using .NET Core, Angular, React.js, cloud platforms, and diverse database technologies.</p>
+            </div>
+            <div class="image-content">
+                <div class="proximity-image">
+                    <img src="../assets/gif/heroSectionPortfolio.gif" alt="radomgif"/>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint" onclick="document.getElementById('page2').scrollIntoView({behavior: 'smooth'})">▼</div>
+    </div>
+
+    <div id="page2" class="page">
+        <div class="text-center mb-5">
+            <h1>About Me</h1>
+        </div> 
+
+        <div class="page2-container">
+            <div class="page2-column">
+                <div class="content-box" id="overview">
+                  <h2>Full Stack Developer with <span class="highlight">3.3 years</span> of experience</h2>
+                  <p>Specializing in scalable APIs, database optimization, and clean architecture. Proficient in .NET Core, Angular, React.js, and cloud platforms (Azure & AWS) with domain expertise in healthcare, HRMS, and enterprise applications.</p>
+                  <div class="social-icons">
+                        <div style="display: flex;gap:10px">
+                            <div>
+                                 <a href="https://www.linkedin.com/in/dwarkesh-vajjala/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                            <div>
+                                <a href="https://github.com/dwarkeshvajjala" target="_blank"><i class="bi bi-github"></i></a>
+                            </div>
+                           
+                        </div>
+                        <div class="resume-icon" onclick="handleResumeClick()">
+
+                            <div class="resume-icon-inner">
+                                <img src = "../assets/Icons/downloadIcon.svg" alt="My Happy SVG"/>
+                            </div>
+                            <div class="resume-text">
+                                Resume
+                            </div>
+                        </div>
+
+                        <!-- Modal -->
+                        <div id="resumeModal" class="resume-modal">
+                            <div class="resume-modal-content">
+                                    <span class="close-btn" onclick="closeResume()">&times;</span>
+                                <iframe id="resumeIframe" class="resume-iframe"></iframe>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+
+                <div class="content-box" id="myBackground">
+                    <h3>My Background</h3>
+                    <p>Based in Ahmedabad, Gujarat, with a B.E. in Information Technology, I have a strong passion for backend development complemented by UI/UX experience. My journey spans from creating marketing and e-commerce websites to developing enterprise applications, working on both legacy and product-based systems across healthcare, HRMS, and enterprise domains.</p>
+                </div>
+
+                <div class="content-box" id="toolStack">
+                    <h3>Tool Stack</h3>
+                    <div class="tool-stack">
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/csharp-original.svg" alt="Tool 1" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/javascript-original.svg" alt="Tool 2" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/typescript-original.svg" alt="Tool 3" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/dot-net-original-wordmark.svg" alt="Tool 4" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/express-original-wordmark.svg" alt="Tool 5" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="./assets/Icons/nodejs-original-wordmark.svg" alt="Tool 6" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/getpostman-icon.svg" alt="Tool 7" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/microsoft-sql-server-logo.svg" alt="Tool 8" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/mongodb-original-wordmark.svg" alt="Tool 9" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/figma-icon.svg" alt="Tool 10" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/react-original-wordmark.svg" alt="Tool 11" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/angular.svg" alt="Tool 12" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/amazonwebservices-original-wordmark.svg" alt="Tool 13" class="tool-icon"/>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <a>
+                                <img src="../assets/Icons/microsoft_azure-icon.svg" alt="Tool 14" class="tool-icon"/>
+                            </a>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="page2-column">
+                <div class="content-box-img">
+                    <div class="profile-container">
+                        <img src="../assets/dwarkesh24.jpg" alt="Profile" class="profile-image">
+                        <div class="intro-text-container" id="introText"></div>
+                    </div>
+                </div>
+                 <div class="content-box" id="skills">
+                    <h3>Skills</h3>
+                    <div class="skills-container">
+                        <span class="skill-item">.NET Framework 4.8 / .NET Core 6/7/8</span>
+                        <!-- <span class="skill-item">ASP.NET Core Web API</span> -->
+                        <span class="skill-item">C#</span>
+                        <!-- <span class="skill-item">RESTful APIs / Microservices</span> -->
+                        <span class="skill-item">Angular</span>
+                        <!-- <span class="skill-item">React.js</span> -->
+                        <span class="skill-item">TypeScript</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">HTML5 / CSS3 / jQuery / AJAX</span>
+                        <span class="skill-item">SQL Server 2012–2022</span>
+                        <span class="skill-item">Azure SQL Database</span>
+                        <span class="skill-item">Azure Cosmos DB</span>
+                        <!-- <span class="skill-item">Azure Functions</span> -->
+                        <span class="skill-item">AWS S3 / AWS Lambda</span>
+                        <!-- <span class="skill-item">IdentityServer4 / JWT / OAuth 2.0</span> -->
+                        <span class="skill-item">Git / GitHub</span>
+                        <span class="skill-item">Jira</span>
+                        <span class="skill-item">Power BI</span>
+                        <span class="skill-item">Chart.js / D3.js / DataTables</span>
+                        <span class="skill-item">FFmpeg</span>
+                    </div>
+                </div>
+            </div>
+            <div class="page2-column" >
+                <div class="content-box" id="experience">
+                    <h3>Experience</h3>
+                    <div class="experience-item">
+                        <h4>Software Developer II</h4>
+                        <p><a class="companyLink" href="https://www.linkedin.com/company/binary-republik/">Binary Republik</a> | 2021 — Now</p>
+                        <ul>
+                            <li>Built scalable RESTful APIs with .NET Core & ASP.NET Web API.</li>
+                            <li>Optimized SQL Server queries, improving performance by 40%.</li>
+                            <li>Integrated Azure & AWS cloud solutions with clean architecture.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h4>Website Designer</h4>
+                        <p><a class="companyLink" href="https://www.linkedin.com/company/minutecreative/posts/?feedView=all">Minute Creative</a> | 2022 — 2023</p>
+                        <ul>
+                            <li>Designed responsive, user-friendly web interfaces.</li>
+                            <li>Worked on both legacy and product-based applications.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>B.E in Information Technologi</h4>
+                        <p>GMIT | 2019 — 2023</p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    
+    <div id="projects" class="page">
+        <div class="text-center mb-4 mt-5">
+            <h2>My Projects</h2>
+        </div>
+        <div class="blog-container">
+            <a href="https://github.com/dwarkeshv/PromptNet" class="blog-link" target="_blank">
+                <div class="blog-item">
+                    <img src="./assets/Images/promteNet.png" alt="Blog post 1" class="blog-image">
+                    <div class="blog-content">
+                        <div>
+                            <h3 class="blog-title">PromptNet</h3>
+                            <p class="blog-excerpt">"PromptNet" is a .NET Core application that leverages OpenAI's powerful GPT API to dynamically generate curated product recommendations tailored to user-specified categories. </p>
+                        </div>
+                       <div>
+                            <p href="https://github.com/dwarkeshv/PromptNet"  class="visit-site-btn" target="_blank">Visit Repository</p>
+                       </div>
+                    </div>
+                </div>
+            </a>
+
+
+        <a href="https://github.com/dwarkeshvajjala/StreamingApp" class="blog-link" target="_blank">
+            <div class="blog-item">
+                <img src="./assets/Images/streamingApp.jpg" alt="Movie Streaming App" class="blog-image">
+                <div class="blog-content">
+                    <div>
+                        <h3 class="blog-title">Movie Streaming Application</h3>
+                        <p class="blog-excerpt">
+                            A full-stack movie streaming platform built with .NET and Angular, featuring user authentication, 
+                            movie search, video playback, and personalized watchlists. Optimized for seamless performance and scalability.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="visit-site-btn">Visit Repository</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+
+
+            <a href="https://hellomaitrik.webflow.io/" class="blog-link" target="_blank">
+                <div class="blog-item">
+                    <img src="./assets/Images/ClientPortfolio.png" alt="Freelance Webflow Project" class="blog-image">
+                    <div class="blog-content">
+                        <div>
+                            <h3 class="blog-title">Client Portfolio Website</h3>
+                            <p class="blog-excerpt">Developed during my time at Minute Creative, this Webflow-based site features a custom visual blueprint and tailored coded interactions to create a distinctive and engaging online portfolio.</p>
+                        </div>
+                        <div>
+                            <p href="https://hellomaitrik.webflow.io/"  class="visit-site-btn" target="_blank" style="background-color: #bc2d2d">Visit Live Site</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div id="blogs" class="page">
+        <div class="text-center mb-4 mt-5">
+            <h2 >My Blog Posts</h2>
+
+        </div>
+        <div class="blog-container">
+            <a href="https://www.c-sharpcorner.com/blogs/integration-of-net-and-openai-chatgpt-apis-custom-prompts-data" class="blog-link" target="_blank">
+                <div class="blog-item">
+                    <img src="../assets/Images/gptBlog.png" alt="Blog post 1" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">	Integration of .NET and OpenAI ChatGPT APIs</h3>
+                        <p class="blog-excerpt">Discover how to enhance your .NET applications by integrating OpenAI's ChatGPT API.</p>
+                        <div class="blog-meta">
+                            <span class="blog-views"><i class="fas fa-eye"></i> 3.6k views</span>
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> Apr 22, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.c-sharpcorner.com/blogs/efficient-error-logging-in-c-sharpnet-using-csv-files" class="blog-link" target="_blank">
+                <div class="blog-item">
+                    <img src="../assets/Images/loggingBlog.png" alt="Blog post 2" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Efficient Error Logging in C#/.NET: Using CSV Files</h3>
+                        <p class="blog-excerpt">Explore effective methods for error logging in C#/.NET applications using CSV file logging and the log4net library.</p>
+                        <div class="blog-meta">
+                            <span class="blog-views"><i class="fas fa-eye"></i> 8k views</span>
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> Apr 23, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="https://www.c-sharpcorner.com/blogs/scaffolddbcontext-strings-for-databasefirst-in-net-core" class="blog-link" target="_blank">
+                <div class="blog-item">
+                    <img src="../assets/Images/dbApprochBlog.png" alt="Blog post 3" class="blog-image">
+                    <div class="blog-content">
+                        <h3 class="blog-title">Scaffold-dbcontext Strings for Database-First in .NET Core</h3>
+                        <p class="blog-excerpt">Learn how to efficiently generate DbContext and models using different methods in Entity Framework Core.</p>
+                        <div class="blog-meta">
+                            <span class="blog-views"><i class="fas fa-eye"></i> 48.1k views</span>
+                            <span class="blog-date"><i class="far fa-calendar-alt"></i> Apr 26, 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer id="contact" class="bg-dark text-light py-4">
+        <div class="container text-center">
+            <h3>Get in Touch</h3>
+            <p>Open to collaborations, opportunities, or just a friendly chat.</p>
+            <div class="footer-links">
+                <a href="mailto:contact.dwarkesh@gmail.com" class="btn btn-outline-light m-1">Email Me</a>
+                <a href="https://www.linkedin.com/in/dwarkesh-vajjala/" target="_blank" class="btn btn-outline-light m-1">LinkedIn</a>
+                <a href="https://github.com/dwarkeshvajjala" target="_blank" class="btn btn-outline-light m-1">GitHub</a>
+            </div>
+            <!-- <p class="mt-3 small">&copy; 2025 Dwarkesh Vajjala. All Rights Reserved.</p> -->
+        </div>
+    </footer>
+
+</div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+      
+    
+  <script>
+    const introTextContainer = document.getElementById('introText');
+    let currentMessageIndex = 0;
+    const messages = [
+        "Olá! 👋",
+        "My name is Dwarkesh",
+        "Fullstack Developer",
+        'Grab my email, and get in touch 👋'
+    ];
+    
+    const DRIVE_PREVIEW_ID = '13b5iuACZ06pn0tDn8BzB-UGz2MdT7G1o';
+
+// Function to handle resume button click
+async function handleResumeClick() {
+    // Open modal with Drive preview
+    // e.preventDefault(); // Prevent default navigation
+
+    openResume();
+
+    //new functioonality
+    await downloadDriveResume();
+    
+    
+}
+
+async function downloadDriveResume() {
+  try {
+    // Replace with your PDF URL
+    // const DRIVE_PREVIEW_ID = '';
+
+    const pdfUrl = './assets/Dwarkesh_Vajjala_FullStack_Devloper.pdf';
+    
+    // Fetch the PDF
+    const response = await fetch(pdfUrl);
+    const pdfBlob = await response.blob();
+    
+    // Create download link
+    const downloadLink = document.createElement('a');
+    downloadLink.href = URL.createObjectURL(pdfBlob);
+    downloadLink.download = 'Dwarkesh_Vajjala_FullStack_Devloper.pdf.pdf'; // Set desired filename
+    
+    // Trigger download
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+    
+    // Clean up
+    URL.revokeObjectURL(downloadLink.href);
+  } catch (error) {
+    console.error('Download failed:', error);
+  }
+}
+
+// function downloadDriveResume() {
+   
+// }
+
+// async function downloadResume() {
+//     try {
+//         // Check if file exists first
+//         const response = await fetch("assets/resume.pdf");
+        
+//         if (!response.ok) {
+//             throw new Error(`HTTP error! status: ${response.status}`);
+//         }
+        
+//         const blob = await response.blob();
+        
+//         // Create a temporary URL for the blob
+//         const url = window.URL.createObjectURL(blob);
+        
+//         // Create a temporary anchor element
+//         const link = document.createElement("a");
+//         link.href = url;
+//         link.download = "Dwarkesh_Resume.pdf";
+        
+//         // Use click() directly without appending to document
+//         link.style.display = 'none';
+//         document.body.appendChild(link);
+//         link.click();
+        
+//         // Cleanup: Remove link and revoke URL
+//         setTimeout(() => {
+//             document.body.removeChild(link);
+//             window.URL.revokeObjectURL(url);
+//         }, 100);
+        
+//         return true;
+//     } catch (error) {
+//         console.error("Error in downloadResume:", error);
+//         throw error; // Re-throw to be handled by caller
+//     }
+// }
+
+// function downloadResume()
+// {
+//     fetch("assets/resume.pdf")
+//             .then(response => response.blob())
+//             .then(blob => {
+//                 // Create a temporary URL for the blob
+//                 const url = URL.createObjectURL(blob);
+
+//                 // Create a temporary anchor element
+//                 const link = document.createElement("a");
+//                 link.href = url;
+//                 link.download = "Dwarkesh_Resume.pdf"; // Suggested file name for download
+
+//                 // Append the link, trigger the click, and remove the link
+//                 document.body.appendChild(link);
+//                 link.click();
+//                 document.body.removeChild(link);
+
+//                 // Revoke the object URL after download
+//                 URL.revokeObjectURL(url);
+//             })
+//             .catch(error => console.error("Error fetching PDF:", error));
+
+// }
+
+
+// Function to open modal with Drive preview
+function openResume() {
+    document.body.classList.add('modal-open');
+    const modal = document.getElementById('resumeModal');
+    modal.style.display = 'block';
+    
+    // Set iframe src to Google Drive preview
+    const iframe = document.getElementById('resumeIframe');
+    iframe.src = `https://drive.google.com/file/d/${DRIVE_PREVIEW_ID}/preview`;
+}
+
+// Function to close modal
+function closeResume() {
+    document.body.classList.remove('modal-open');
+    const modal = document.getElementById('resumeModal');
+    modal.style.display = 'none';
+    
+    // Clear iframe src
+    const iframe = document.getElementById('resumeIframe');
+    iframe.src = '';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('resumeModal');
+    if (event.target === modal) {
+        closeResume();
+    }
+}    
+
+
+function createMessageElement() {
+        const messageElement = document.createElement('div');
+        messageElement.className = 'message';
+        introTextContainer.appendChild(messageElement);
+        return messageElement;
+    }
+
+    function showTypingIndicator(element) {
+        element.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
+        element.classList.add('visible');
+    }
+
+    function typeMessage(element, message) {
+        return new Promise(resolve => {
+            let i = 0;
+            const intervalId = setInterval(() => {
+                if (i < message.length) {
+                    element.innerHTML += message.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(intervalId);
+                    if (message.includes('Grab my email')) {
+                        element.innerHTML = element.innerHTML.replace('Grab', '<span class="grab-email">Grab</span>');
+                    }
+                    resolve();
+                }
+            }, 50); // Adjust typing speed here
+        });
+    }
+
+    async function animateMessages() {
+        for (let i = 0; i < messages.length; i++) {
+            const messageElement = createMessageElement();
+            showTypingIndicator(messageElement);
+
+            // For the first message, wait 0.5 seconds before typing
+            if (i === 0) {
+                await new Promise(resolve => setTimeout(resolve, 2500));
+            } else {
+                await new Promise(resolve => setTimeout(resolve, 1000)); // Wait before typing for subsequent messages
+            }
+
+            messageElement.innerHTML = ''; // Clear typing indicator
+            await typeMessage(messageElement, messages[i]);
+            await new Promise(resolve => setTimeout(resolve, 500)); // Pause after message
+        }
+
+        // Add click event to the "Grab" span after all messages are typed
+        const grabSpan = document.querySelector('.grab-email');
+        if (grabSpan) {
+            grabSpan.addEventListener('click', function() {
+                const email = 'contact.dwarkesh@gmail.com'; // Replace with your actual email
+                navigator.clipboard.writeText(email).then(() => {
+                    alert('Email copied to clipboard!');
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                    window.location.href = `mailto:${email}`;
+                });
+            });
+        }
+    }
+
+    // Intersection Observer to trigger animation when page2 is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateMessages();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the target is visible
+
+    observer.observe(document.getElementById('page2'));
+
+// Custom cursor
+// const cursor = document.querySelector('.custom-cursor');
+// document.addEventListener('mousemove', (e) => {
+//     cursor.style.left = e.clientX + 'px';
+//     cursor.style.top = e.clientY + 'px';
+// });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cursorDot = document.querySelector('.cursor-dot');
+    const cursorCircle = document.querySelector('.cursor-circle');
+    let mouseX = 0;
+    let mouseY = 0;
+    let circleX = 0;
+    let circleY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Dot follows cursor exactly
+        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        
+        // Circle follows with slight delay
+        requestAnimationFrame(updateCircle);
+    });
+
+    function updateCircle() {
+        // Smooth following effect for circle
+        const ease = 0.15;
+        circleX += (mouseX - circleX) * ease;
+        circleY += (mouseY - circleY) * ease;
+        
+        cursorCircle.style.transform = `translate(${circleX}px, ${circleY}px)`;
+    }
+
+    // Add hover effect for interactive elements
+    const interactiveElements = document.querySelectorAll('a, button, .interactive');
+    
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursorDot.classList.add('hover');
+            cursorCircle.classList.add('hover');
+        });
+        
+        el.addEventListener('mouseleave', () => {
+            cursorDot.classList.remove('hover');
+            cursorCircle.classList.remove('hover');
+        });
+    });
+});
+// const proximityImage = document.querySelector('.proximity-image');
+// document.addEventListener('mousemove', (e) => {
+//     const rect = proximityImage.getBoundingClientRect();
+//     const centerX = rect.left + rect.width / 2;
+//     const centerY = rect.top + rect.height / 2;
+//     const distanceX = (e.clientX - centerX) / 20;
+//     const distanceY = (e.clientY - centerY) / 20;
+//     proximityImage.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
+// });
+
+document.addEventListener("DOMContentLoaded",function(){
+
+
+
+        const canvas = document.getElementById('noiseCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function createNoise() {
+            const imgData = ctx.createImageData(canvas.width, canvas.height);
+            const data = imgData.data;
+            
+            for (let i = 0; i < data.length; i += 4) {
+                const value = Math.random() * 70;
+                data[i] = value;     // red
+                data[i+1] = value;   // green
+                data[i+2] = value;   // blue
+                data[i+3] = 50;      // alpha (transparency)
+            }
+            
+            return imgData;
+        }
+
+        function animate() {
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.putImageData(createNoise(), 0, 0);
+            
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+    });
+
+
+  </script>
+</body>
+</html>
