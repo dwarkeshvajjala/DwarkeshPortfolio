@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dwarkesh Vajjala - Fullstack Developer</title>
-    <meta name="description" content="Dwarkesh Vajjala - Fullstack Developer with 3.2 years of experience, specializing in .NET Core, Angular, and database technologies.">
+    <meta name="description" content="Portfolio of Dwarkesh Vajjala, Full Stack .NET Developer (C#, .NET, Azure) from Ahmedabad. With expertise in ASP.NET, Azure, Angular, and cloud integration. Explore projects, blogs, and career highlights.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dwarkesh Vajjala – Software Developer Portfolio</title>
+
+
+
     <!-- Preload GIFs -->
-    <link rel="preload" as="image" href="../assets/gif/heroSectionPortfolio.gif">
+    <link rel="preload" as="image" href="../assets/gif/heroSectionPortfolio2.gif">
     <link rel="preload" as="image" href="../assets/gif/portfolioIcon.gif">
 
     <!-- Preload Icons -->
@@ -44,7 +47,6 @@
     
     <style>
 
-
         body, html {
             height: 100%;
             margin: 0;
@@ -54,6 +56,11 @@
             background-color: black;
             color: #ffffff;
         }
+        .content{
+            overflow-x: hidden;
+        }
+        .navbar-toggler-icon
+        {color: white;}
         .page {
             min-height: 100vh;
             display: flex;
@@ -73,7 +80,7 @@
 
         /* page 1  */
         #page1 {
-            background: url('/api/placeholder/1920/1080') no-repeat center center;
+            /* background: url('/api/placeholder/1920/1080') no-repeat center center; */
             background-size: cover;
             text-align: left;
             padding: 0 5%;
@@ -96,13 +103,13 @@
             justify-content: center;
             align-items: center;
         }
-        .proximity-image {
+        /* .proximity-image {
             width: 300px;
             height: 300px;
             background: url('/api/placeholder/300/300') no-repeat center center;
             background-size: cover;
             transition: transform 0.3s ease;
-        }
+        } */
         #page1 h1 {
             font-size: 2.2rem;
             margin-bottom: 1rem;
@@ -114,38 +121,20 @@
         }
         #page1 p {
             font-size: 1.2rem;
-            max-width: 600px;
             margin-bottom: 2rem;
         }
 
-        /* navbar */
-        /* .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 5%;
-            background-color: black;
-            background-color: blue;
-        }
-        .navbar-brand img {
-            height: 50px;
-        }
-        .navbar-nav .nav-link {
-            color: #ffffff;
-            margin-left: 2rem;
-        } */
 
         .navbar {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            padding: 1rem 0;  /* Remove horizontal padding */
+            padding: 1rem 0;  
             background-color: black;
         }
         .container-fluid {
-            padding-left: 5%;  /* Match the padding of the hero section */
+            padding-left: 5%; 
             padding-right: 5%;
         }
         .navbar-brand
@@ -180,8 +169,23 @@
                 transform: translateY(-5px) translateX(-50%);
             }
         }
-
-
+        @media (max-width: 800px) {
+            body {
+                padding-top: 100px;
+            }
+        }
+        @media (min-width: 800px) {
+             #page1 p {
+                max-width: 600px;        
+            }
+          
+        }
+        @media (min-width: 1050px) {
+            .heroSectionWorkingMangif
+            {
+                padding-left: 20%;
+            }
+        }
 
         /* page 2  */
         #page2 {
@@ -335,6 +339,7 @@
             /* color: #007bff; */
             text-decoration: underline;
             cursor: pointer;
+            font-weight: bold;
         }
         .grab-email:hover {
             color: #61dafb;
@@ -477,6 +482,7 @@
                 grid-template-columns: 1fr;
             }
         }
+       
         /* resumem popUP */
         /* The Modal (hidden by default) */
             /* Hide body scroll when modal is open */
@@ -562,14 +568,32 @@
 }
 
 .cursor-dot {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background-color: #61dafb;
+    /* position: fixed;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #61dafb;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
     z-index: 99999;
+    pointer-events: none; */
+      position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #61dafb;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%); /* center on real cursor */
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+
+
+}
+body.cursor-active {
+  cursor: none; 
 }
 
 .cursor-circle {
@@ -585,25 +609,48 @@
 
 /* Hover effects */
 .cursor-dot.hover {
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1);
     background-color: #61dafb;
 }
 
 .cursor-circle.hover {
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(0.5);
     border-color: rgba(97, 218, 251, 0);
     background: rgba(97, 218, 251, 0.1);
 }
 
 /* Hide on mobile/tablet */
 @media (max-width: 1024px) {
-    .cursor-wrapper {
+    .cursor-dot {
         display: none;
     }
+    
     * {
         cursor: auto !important;
     }
 }
+
+/* ...existing code... */
+
+/* Show custom cursor only for screens >= 1000px */
+@media (max-width: 999px) {
+    .cursor-dot {
+        display: none !important;
+    }
+    body {
+        cursor: auto !important;
+    }
+}
+@media (min-width: 1000px) {
+    .cursor-dot {
+        display: block;
+    }
+    body.cursor-active {
+        cursor: none;
+    }
+}
+
+
         /* check */
         @media (max-width: 1200px) {
             .grid-container {
@@ -675,9 +722,11 @@
 </head>
 <body>
     <canvas id="noiseCanvas"></canvas>
-    <div class="cursor-glow"></div>
-    <div class="custom-cursor"></div>
-    
+    <div class="cursor-dot"></div>
+    <div class="cursor-wrapper">
+        <!-- <div class="cursor-circle"></div>    -->
+    </div>
+
     <div class="content">
 
     <nav class="navbar navbar-expand-lg">
@@ -714,12 +763,12 @@
         <div class="content-wrapper">
             <div class="text-content">
                 <h1>Hi, I'm Dwarkesh</h1>
-                <h2>I'M A <span class="highlight">FULLSTACK</span><br>DEVELOPER</h2>
+                <h2>I'm A <span class="highlight">FULLSTACK</span><br>DEVELOPER</h2>
                 <p>Full-stack developer with 3+ years of experience delivering user-focused digital products and scalable backend systems using .NET Core, Angular, React.js, cloud platforms, and diverse database technologies.</p>
             </div>
             <div class="image-content">
                 <div class="proximity-image">
-                    <img src="../assets/gif/heroSectionPortfolio.gif" alt="radomgif"/>
+                    <img class="heroSectionWorkingMangif" src="../assets/gif/heroSectionPortfolio2.gif" alt="radomgif"/>
                 </div>
             </div>
         </div>
@@ -1044,10 +1093,55 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
       
-    
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Dwarkesh Vajjala",
+            "url": "https://dwarkeshvajjala.vercel.app/",
+            "sameAs": [
+                "https://github.com/dwarkeshvajjala",
+                "https://www.linkedin.com/in/dwarkesh-vajjala/"
+            ],
+            "jobTitle": "Full Stack .NET Developer",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Binary Republik",
+                "name": "Minute Creative",
+                "url": "https://www.binaryrepublik.com/"
+            },
+            "alumniOf": "Your College/University",
+            "knowsAbout": ["ASP.NET Core", "Azure", "C#", "Angular", "Full Stack Development"]
+        }
+    </script>
+
   <script>
+
+    let H1Tag = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Dwarkesh Vajjala",
+        "url": "https://dwarkeshvajjala.vercel.app/",
+        "sameAs": [
+            "https://github.com/dwarkeshvajjala",
+            "https://www.linkedin.com/in/dwarkesh-vajjala/"
+        ],
+        "jobTitle": "Full Stack .NET Developer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Binary Republik",
+            "name": "Minute Creative",
+            "url": "https://www.binaryrepublik.com/"
+        },
+        "alumniOf": "Bachelor of Engineering in Information Technology",
+        "knowsAbout": ["ASP.NET Core", "Azure", "C#", "Angular", "Full Stack Development"]
+    }
+
     const introTextContainer = document.getElementById('introText');
     let currentMessageIndex = 0;
+    const DRIVE_PREVIEW_ID = '13b5iuACZ06pn0tDn8BzB-UGz2MdT7G1o';
+    
+
     const messages = [
         "Olá! 👋",
         "My name is Dwarkesh",
@@ -1055,153 +1149,223 @@
         'Grab my email, and get in touch 👋'
     ];
     
-    const DRIVE_PREVIEW_ID = '13b5iuACZ06pn0tDn8BzB-UGz2MdT7G1o';
+    // Intersection Observer to trigger animation when page2 is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateMessages();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 }); // Trigger when 50% of the target is visible
+    observer.observe(document.getElementById('page2'));
 
-// Function to handle resume button click
-async function handleResumeClick() {
-    // Open modal with Drive preview
-    // e.preventDefault(); // Prevent default navigation
 
-    openResume();
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('resumeModal');
+        if (event.target === modal) {
+            closeResume();
+        }
+    }    
 
-    //new functioonality
-    await downloadDriveResume();
-    
-    
-}
 
-async function downloadDriveResume() {
-  try {
-    // Replace with your PDF URL
-    // const DRIVE_PREVIEW_ID = '';
 
-    const pdfUrl = './assets/Dwarkesh_Vajjala_FullStack_Devloper.pdf';
-    
-    // Fetch the PDF
-    const response = await fetch(pdfUrl);
-    const pdfBlob = await response.blob();
-    
-    // Create download link
-    const downloadLink = document.createElement('a');
-    downloadLink.href = URL.createObjectURL(pdfBlob);
-    downloadLink.download = 'Dwarkesh_Vajjala_FullStack_Devloper.pdf.pdf'; // Set desired filename
-    
-    // Trigger download
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-    
-    // Clean up
-    URL.revokeObjectURL(downloadLink.href);
-  } catch (error) {
-    console.error('Download failed:', error);
+     document.addEventListener("DOMContentLoaded",function(){
+
+            // //custom cursor
+            // const cursorDot = document.querySelector('.cursor-dot');
+            // // const cursorCircle = document.querySelector('.cursor-circle');
+            // // Hide custom cursor and show system cursor initially
+            // cursorDot.style.opacity = '0';
+            // document.body.classList.remove('cursor-active');
+
+            // let mouseX = 0;
+            // let mouseY = 0;
+            // let circleX = 0;
+            // let circleY = 0;
+
+            // document.addEventListener('mousemove', (e) => {
+            //     mouseX = e.clientX;
+            //     mouseY = e.clientY;
+                
+            //     // Dot follows cursor exactly
+            //     cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+                
+            //     // Circle follows with slight delay
+            //     requestAnimationFrame(updateCircle);
+            // });
+
+            // // function updateCircle() {
+            // //     // Smooth following effect for circle
+            // //     const ease = 0.15;
+            // //     circleX += (mouseX - circleX) * ease;
+            // //     circleY += (mouseY - circleY) * ease;
+                
+            // //     // cursorCircle.style.transform = `translate(${circleX}px, ${circleY}px)`;
+            // // }
+
+            
+
+const cursorDot = document.querySelector('.cursor-dot');
+
+// Move cursor with mouse
+document.addEventListener('mousemove', (e) => {
+  cursorDot.style.left = e.clientX + 'px';
+  cursorDot.style.top = e.clientY + 'px';
+});
+
+// Show when inside page
+document.addEventListener('mouseenter', () => {
+  cursorDot.style.opacity = '1';
+  document.body.classList.add('cursor-active');
+});
+
+// Hide when leaving page
+document.addEventListener('mouseleave', () => {
+  cursorDot.style.opacity = '0';
+  document.body.classList.remove('cursor-active');
+});
+
+// Hide when tab not active
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    cursorDot.style.opacity = '0';
+    document.body.classList.remove('cursor-active');
+  } else {
+    cursorDot.style.opacity = '1';
+    document.body.classList.add('cursor-active');
   }
-}
+});
 
-// function downloadDriveResume() {
-   
-// }
+// Add hover effect for interactive elements
+            const interactiveElements = document.querySelectorAll('a, button, .interactive');
+            
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    cursorDot.classList.add('hover');
+                    // cursorCircle.classList.add('hover');
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    cursorDot.classList.remove('hover');
+                    // cursorCircle.classList.remove('hover');
+                });
+            });
 
-// async function downloadResume() {
-//     try {
-//         // Check if file exists first
-//         const response = await fetch("assets/resume.pdf");
-        
-//         if (!response.ok) {
-//             throw new Error(`HTTP error! status: ${response.status}`);
-//         }
-        
-//         const blob = await response.blob();
-        
-//         // Create a temporary URL for the blob
-//         const url = window.URL.createObjectURL(blob);
-        
-//         // Create a temporary anchor element
-//         const link = document.createElement("a");
-//         link.href = url;
-//         link.download = "Dwarkesh_Resume.pdf";
-        
-//         // Use click() directly without appending to document
-//         link.style.display = 'none';
-//         document.body.appendChild(link);
-//         link.click();
-        
-//         // Cleanup: Remove link and revoke URL
-//         setTimeout(() => {
-//             document.body.removeChild(link);
-//             window.URL.revokeObjectURL(url);
-//         }, 100);
-        
-//         return true;
-//     } catch (error) {
-//         console.error("Error in downloadResume:", error);
-//         throw error; // Re-throw to be handled by caller
-//     }
-// }
-
-// function downloadResume()
-// {
-//     fetch("assets/resume.pdf")
-//             .then(response => response.blob())
-//             .then(blob => {
-//                 // Create a temporary URL for the blob
-//                 const url = URL.createObjectURL(blob);
-
-//                 // Create a temporary anchor element
-//                 const link = document.createElement("a");
-//                 link.href = url;
-//                 link.download = "Dwarkesh_Resume.pdf"; // Suggested file name for download
-
-//                 // Append the link, trigger the click, and remove the link
-//                 document.body.appendChild(link);
-//                 link.click();
-//                 document.body.removeChild(link);
-
-//                 // Revoke the object URL after download
-//                 URL.revokeObjectURL(url);
-//             })
-//             .catch(error => console.error("Error fetching PDF:", error));
-
-// }
-
-
-// Function to open modal with Drive preview
-function openResume() {
-    document.body.classList.add('modal-open');
-    const modal = document.getElementById('resumeModal');
-    modal.style.display = 'block';
     
-    // Set iframe src to Google Drive preview
-    const iframe = document.getElementById('resumeIframe');
-    iframe.src = `https://drive.google.com/file/d/${DRIVE_PREVIEW_ID}/preview`;
-}
-
-// Function to close modal
-function closeResume() {
-    document.body.classList.remove('modal-open');
-    const modal = document.getElementById('resumeModal');
-    modal.style.display = 'none';
     
-    // Clear iframe src
-    const iframe = document.getElementById('resumeIframe');
-    iframe.src = '';
-}
+        // Create a canvas for noise effect
+        const canvas = document.getElementById('noiseCanvas');
+        const ctx = canvas.getContext('2d');
 
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById('resumeModal');
-    if (event.target === modal) {
-        closeResume();
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function createNoise() {
+            const imgData = ctx.createImageData(canvas.width, canvas.height);
+            const data = imgData.data;
+            
+            for (let i = 0; i < data.length; i += 4) {
+                const value = Math.random() * 70;
+                data[i] = value;     // red
+                data[i+1] = value;   // green
+                data[i+2] = value;   // blue
+                data[i+3] = 50;      // alpha (transparency)
+            }
+            
+            return imgData;
+        }
+
+        function animate() {
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            ctx.putImageData(createNoise(), 0, 0);
+            
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+    });
+
+
+    // Function to handle resume button click
+    async function handleResumeClick() {
+        // Open modal with Drive preview
+        // e.preventDefault(); // Prevent default navigation
+
+        openResume();
+
+        //new functioonality
+        await downloadDriveResume();
+        
+        
     }
-}    
 
+    async function downloadDriveResume() {
+    try {
+        // Replace with your PDF URL
+        // const DRIVE_PREVIEW_ID = '';
 
-function createMessageElement() {
-        const messageElement = document.createElement('div');
-        messageElement.className = 'message';
-        introTextContainer.appendChild(messageElement);
-        return messageElement;
+        const pdfUrl = './assets/Dwarkesh_Vajjala_FullStack_Devloper.pdf';
+        
+        // Fetch the PDF
+        const response = await fetch(pdfUrl);
+        const pdfBlob = await response.blob();
+        
+        // Create download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(pdfBlob);
+        downloadLink.download = 'Dwarkesh_Vajjala_FullStack_Devloper.pdf.pdf'; // Set desired filename
+        
+        // Trigger download
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        
+        // Clean up
+        URL.revokeObjectURL(downloadLink.href);
+    } catch (error) {
+        console.error('Download failed:', error);
     }
+    }
+
+    // Function to open modal with Drive preview
+    function openResume() {
+        document.body.classList.add('modal-open');
+        const modal = document.getElementById('resumeModal');
+        modal.style.display = 'block';
+        
+        // Set iframe src to Google Drive preview
+        const iframe = document.getElementById('resumeIframe');
+        iframe.src = `https://drive.google.com/file/d/${DRIVE_PREVIEW_ID}/preview`;
+    }
+
+    // Function to close modal
+    function closeResume() {
+        document.body.classList.remove('modal-open');
+        const modal = document.getElementById('resumeModal');
+        modal.style.display = 'none';
+        
+        // Clear iframe src
+        const iframe = document.getElementById('resumeIframe');
+        iframe.src = '';
+    }
+
+
+    function createMessageElement() {
+            const messageElement = document.createElement('div');
+            messageElement.className = 'message';
+            introTextContainer.appendChild(messageElement);
+            return messageElement;
+        }
 
     function showTypingIndicator(element) {
         element.innerHTML = '<div class="typing-indicator"><span></span><span></span><span></span></div>';
@@ -1258,18 +1422,10 @@ function createMessageElement() {
         }
     }
 
-    // Intersection Observer to trigger animation when page2 is in view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateMessages();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 }); // Trigger when 50% of the target is visible
 
-    observer.observe(document.getElementById('page2'));
 
+   
+    
 // Custom cursor
 // const cursor = document.querySelector('.custom-cursor');
 // document.addEventListener('mousemove', (e) => {
@@ -1277,49 +1433,6 @@ function createMessageElement() {
 //     cursor.style.top = e.clientY + 'px';
 // });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorCircle = document.querySelector('.cursor-circle');
-    let mouseX = 0;
-    let mouseY = 0;
-    let circleX = 0;
-    let circleY = 0;
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-        
-        // Dot follows cursor exactly
-        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-        
-        // Circle follows with slight delay
-        requestAnimationFrame(updateCircle);
-    });
-
-    function updateCircle() {
-        // Smooth following effect for circle
-        const ease = 0.15;
-        circleX += (mouseX - circleX) * ease;
-        circleY += (mouseY - circleY) * ease;
-        
-        cursorCircle.style.transform = `translate(${circleX}px, ${circleY}px)`;
-    }
-
-    // Add hover effect for interactive elements
-    const interactiveElements = document.querySelectorAll('a, button, .interactive');
-    
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursorDot.classList.add('hover');
-            cursorCircle.classList.add('hover');
-        });
-        
-        el.addEventListener('mouseleave', () => {
-            cursorDot.classList.remove('hover');
-            cursorCircle.classList.remove('hover');
-        });
-    });
-});
 // const proximityImage = document.querySelector('.proximity-image');
 // document.addEventListener('mousemove', (e) => {
 //     const rect = proximityImage.getBoundingClientRect();
@@ -1329,50 +1442,6 @@ document.addEventListener('DOMContentLoaded', () => {
 //     const distanceY = (e.clientY - centerY) / 20;
 //     proximityImage.style.transform = `translate(${distanceX}px, ${distanceY}px)`;
 // });
-
-document.addEventListener("DOMContentLoaded",function(){
-
-
-
-        const canvas = document.getElementById('noiseCanvas');
-        const ctx = canvas.getContext('2d');
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        function createNoise() {
-            const imgData = ctx.createImageData(canvas.width, canvas.height);
-            const data = imgData.data;
-            
-            for (let i = 0; i < data.length; i += 4) {
-                const value = Math.random() * 70;
-                data[i] = value;     // red
-                data[i+1] = value;   // green
-                data[i+2] = value;   // blue
-                data[i+3] = 50;      // alpha (transparency)
-            }
-            
-            return imgData;
-        }
-
-        function animate() {
-            ctx.fillStyle = 'black';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            
-            ctx.putImageData(createNoise(), 0, 0);
-            
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-
-    });
-
 
   </script>
 </body>
